@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;700&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@
 
 body {
   font-size: 1rem;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: "Comfortaa", sans-serif;
   color: #283618;
   background-color: #fefae0;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-family: 'Borel';
+  font-family: "Borel";
   text-align: center;
   background-color: #283618;
   color: white;
@@ -109,7 +109,7 @@ button {
   margin-bottom: 3rem;
 }
 
-.list input[type='checkbox'] {
+.list input[type="checkbox"] {
   height: 3rem;
   width: 3rem;
   accent-color: #283618;
