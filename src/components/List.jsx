@@ -1,10 +1,10 @@
-export default function ShoppingList({ items }) {
+export default function ShoppingList({ items, onDeleteItem }) {
   return (
     <>
       <div className="list">
         <ul>
           {items.map((item) => (
-            <List item={item} key={item.id} />
+            <List item={item} key={item.id} onDeleteItem={onDeleteItem} />
           ))}
         </ul>
       </div>
@@ -20,14 +20,14 @@ export default function ShoppingList({ items }) {
   );
 }
 
-function List(props) {
+function List({ item, onDeleteItem }) {
   return (
-    <li key={props.item.id}>
+    <li key={item.id}>
       <input type="checkbox"></input>
-      <span style={props.item.check ? { textDecoration: "line-through" } : {}}>
-        {props.item.quantity} {props.item.name}
+      <span style={item.check ? { textDecoration: "line-through" } : {}}>
+        {item.quantity} {item.name}
       </span>
-      <button>&times;</button>
+      <button onClick={() => onDeleteItem(item.id)}>&times;</button>
     </li>
   );
 }

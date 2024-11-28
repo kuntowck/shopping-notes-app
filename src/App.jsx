@@ -27,10 +27,14 @@ const shoppingItem = [
 ];
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(shoppingItem);
 
   const handleAddItems = (item) => {
     setItems([...items, item]);
+  };
+
+  const handleDeleteItem = (id) => {
+    setItems((items) => items.filter((item) => item.id !== id));
   };
 
   console.log(items);
@@ -38,7 +42,7 @@ function App() {
     <div className="app">
       <Header />
       <Form onAddItems={handleAddItems} />
-      <ShoppingList items={items} />
+      <ShoppingList items={items} onDeleteItem={handleDeleteItem} />
       <Footer />
     </div>
   );
